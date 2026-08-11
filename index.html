@@ -455,5 +455,68 @@
     <script src="script.js"></script>
 
 </body>
+    <!-- ================= INTERACTIVE PORTFOLIO UI ================= -->
+
+<!-- Scroll Progress -->
+
+<div id="scrollProgress"></div>
+
+<!-- Theme Toggle -->
+
+<button id="themeToggle" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon"></i>
+</button>
+
+<!-- Project Details Modal -->
+
+<div class="project-modal" id="projectModal">
+    <div class="modal-content">
+
+```
+    <button class="modal-close" id="modalClose" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <span class="modal-ref" id="modalRef">D1</span>
+
+    <h2 id="modalTitle">Project Title</h2>
+
+    <p id="modalDescription">
+        Project description
+    </p>
+
+    <div class="modal-info">
+        <div>
+            <span>TOOLS</span>
+            <strong id="modalTools">Power BI</strong>
+        </div>
+
+        <div>
+            <span>ANALYSIS</span>
+            <strong id="modalAnalysis">Sales Analysis</strong>
+        </div>
+    </div>
+
+    <div class="modal-insights">
+        <h3>Key Insights</h3>
+        <ul id="modalList"></ul>
+    </div>
+
+    <a id="modalLink"
+       href="#"
+       target="_blank"
+       rel="noopener"
+       class="modal-project-btn">
+        View Project
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+</div>
+```
+
+</div>
+
+<!-- ================= END INTERACTIVE UI ================= -->
+
 
 </html>
