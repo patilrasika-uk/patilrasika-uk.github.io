@@ -1,65 +1,307 @@
-<!-- ================= INTERACTIVE PORTFOLIO UI ================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- Scroll Progress -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasika Patil | Data Analyst Portfolio</title>
+    <meta name="description" content="Rasika Patil - Aspiring Data Analyst skilled in Python, SQL, Excel, Power BI and Tableau. Portfolio of dashboards and data visualization projects.">
 
-<div id="scrollProgress"></div>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-<!-- Theme Toggle -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<button id="themeToggle" aria-label="Toggle theme">
-    <i class="fa-solid fa-moon"></i>
-</button>
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
 
-<!-- Project Details Modal -->
+<body>
 
-<div class="project-modal" id="projectModal">
-    <div class="modal-content">
+    <!-- ================= NAVIGATION ================= -->
 
-```
-    <button class="modal-close" id="modalClose" aria-label="Close">
-        <i class="fa-solid fa-xmark"></i>
-    </button>
+    <header>
 
-    <span class="modal-ref" id="modalRef">D1</span>
-
-    <h2 id="modalTitle">Project Title</h2>
-
-    <p id="modalDescription">
-        Project description
-    </p>
-
-    <div class="modal-info">
-        <div>
-            <span>TOOLS</span>
-            <strong id="modalTools">Power BI</strong>
+        <div class="logo">
+            Rasika Patil
         </div>
 
-        <div>
-            <span>ANALYSIS</span>
-            <strong id="modalAnalysis">Sales Analysis</strong>
+        <nav>
+
+            <ul>
+
+                <li><a href="#home" class="active">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#certificates">Certificates</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HOME ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h3>Hello, I'm</h3>
+
+            <h1>Rasika Patil</h1>
+
+            <h2>Aspiring Data Analyst</h2>
+
+            <p>
+                Passionate about Data Analytics and Business Intelligence.
+                Skilled in Python, SQL, Excel, Power BI, Tableau, Pandas,
+                NumPy and Matplotlib. I love transforming raw data into
+                meaningful business insights.
+            </p>
+
+            <a href="Resume.pdf" download class="btn">
+                Download Resume
+            </a>
+
+            <a href="#contact" class="btn2">
+                Contact Me
+            </a>
+
         </div>
-    </div>
 
-    <div class="modal-insights">
-        <h3>Key Insights</h3>
-        <ul id="modalList"></ul>
-    </div>
+        <div class="hero-image">
+            <img src="profile.jpg" alt="Rasika Patil - Profile Photo">
+        </div>
 
-    <a id="modalLink"
-       href="#"
-       target="_blank"
-       rel="noopener"
-       class="modal-project-btn">
-        View Project
-        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-    </a>
+    </section>
 
-</div>
-```
+    <!-- ================= ABOUT ================= -->
 
-</div>
+    <section id="about">
 
-<!-- ================= END INTERACTIVE UI ================= -->
+        <h2 class="heading">About Me</h2>
 
+        <p>
+            I am an aspiring Data Analyst passionate about solving business
+            problems through data. I enjoy creating interactive dashboards,
+            performing data analysis, and building visualizations that help
+            organizations make informed decisions.
+        </p>
+
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section id="skills">
+
+        <h2 class="heading">Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-chart-area"></i>
+                <h3>Seaborn</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Visualization</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-file-excel"></i>
+                <h3>Excel</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Power BI</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Tableau</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-table"></i>
+                <h3>Pandas</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Matplotlib</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section id="projects">
+
+        <h2 class="heading">My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+                <img src="images/hr-dashboard.png" alt="HR Analytics Dashboard">
+                <h3>HR Analytics Dashboard</h3>
+                <p>
+                    Power BI dashboard analyzing employee attrition,
+                    department performance, salary trends and KPIs.
+                </p>
+                <a href="#" target="_blank" rel="noopener">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="images/domino-dashboard.png" alt="Domino's Sales Dashboard">
+                <h3>Domino's Sales Dashboard</h3>
+                <p>
+                    Tableau dashboard showing revenue, orders,
+                    top-selling pizzas and monthly sales.
+                </p>
+                <a href="#" target="_blank" rel="noopener">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="images/sales-dashboard.png" alt="Sales Dashboard">
+                <h3>Sales Dashboard</h3>
+                <p>
+                    Interactive sales dashboard displaying profit,
+                    revenue and regional performance.
+                </p>
+                <a href="#" target="_blank" rel="noopener">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="images/instagram-dashboard.png" alt="Instagram Analytics Dashboard">
+                <h3>Instagram Analytics Dashboard</h3>
+                <p>
+                    Dashboard for engagement analysis, follower growth
+                    and top-performing posts.
+                </p>
+                <a href="#" target="_blank" rel="noopener">View Project</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <section id="certificates">
+
+        <h2 class="heading">Certifications</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3>SQL</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Power BI</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Tableau</h3>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-file-excel"></i>
+                <h3>Excel</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact">
+
+        <h2 class="heading">Contact Me</h2>
+
+        <div class="social-links">
+
+            <a href="mailto:patilrasika362@gmail.com">
+                <i class="fas fa-envelope"></i>
+                Email
+            </a>
+
+            <a href="https://www.linkedin.com/in/rasika-patil/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>© 2026 Rasika Patil | Data Analyst Portfolio</p>
+
+        <div class="footer-icons">
+
+            <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/rasika-patil/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
 
 </html>
