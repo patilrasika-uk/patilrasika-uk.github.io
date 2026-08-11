@@ -2,49 +2,37 @@
 // Data Analyst Portfolio - script.js
 // ======================================
 
-
-// ======================================
-// 1. Smooth Scrolling Navigation
-// ======================================
-
-document.querySelectorAll("nav a").forEach(link => {
-
-    link.addEventListener("click", function (e) {
-
+// Smooth scrolling for navigation
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const targetId = this.getAttribute("href");
-        const target = document.querySelector(targetId);
+        const target = document.querySelector(this.getAttribute('href'));
 
         if (target) {
             target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+                behavior: 'smooth'
             });
         }
-
     });
-
 });
 
-
 // ======================================
-// 2. Active Navigation Link
+// Active Navigation Link
 // ======================================
 
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
 
-function updateActiveNav() {
+window.addEventListener("scroll", () => {
 
     let current = "";
 
     sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 180;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 150;
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        if (window.pageYOffset >= sectionTop) {
             current = section.getAttribute("id");
         }
 
@@ -60,81 +48,77 @@ function updateActiveNav() {
 
     });
 
-}
-
-window.addEventListener("scroll", updateActiveNav);
-window.addEventListener("load", updateActiveNav);
-
+});
 
 // ======================================
-// 3. Sticky Header Shadow
+// Sticky Header Shadow
 // ======================================
 
 const header = document.querySelector("header");
 
-function headerShadow() {
-
-    if (!header) return;
+window.addEventListener("scroll", () => {
 
     if (window.scrollY > 50) {
-        header.style.boxShadow = "0 10px 30px rgba(16, 32, 28, 0.12)";
-    } else {
+
+        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.25)";
+    }
+    else {
+
         header.style.boxShadow = "none";
     }
 
-}
-
-window.addEventListener("scroll", headerShadow);
-window.addEventListener("load", headerShadow);
-
+});
 
 // ======================================
-// 4. Scroll Reveal Animation
+// Scroll Reveal Animation
 // ======================================
 
 const revealElements = document.querySelectorAll(
-    ".skill-card, .project-card, #about, #contact, #certificates"
+    ".hero, .skill-card, .project-card, #about, #contact, #certificates"
 );
 
-revealElements.forEach(element => {
-    element.style.opacity = "0";
-    element.style.transform = "translateY(40px)";
-    element.style.transition = "opacity 0.7s ease, transform 0.7s ease";
-});
-
-function reveal() {
-
-    const windowHeight = window.innerHeight;
+const reveal = () => {
 
     revealElements.forEach(element => {
+
+        const windowHeight = window.innerHeight;
 
         const revealTop = element.getBoundingClientRect().top;
 
         if (revealTop < windowHeight - 100) {
+
             element.style.opacity = "1";
             element.style.transform = "translateY(0)";
+            element.style.transition = "all .8s ease";
+
         }
 
     });
 
-}
+};
+
+revealElements.forEach(element => {
+
+    element.style.opacity = "0";
+    element.style.transform = "translateY(60px)";
+
+});
 
 window.addEventListener("scroll", reveal);
 window.addEventListener("load", reveal);
 
-
 // ======================================
-// 5. Typing Effect (role title)
+// Typing Effect
 // ======================================
 
-const typingText = document.querySelector(".typed-role");
+const typingText = document.querySelector(".hero-text h2");
 
 const words = [
-    "Data Analyst",
+    "Aspiring Data Analyst",
     "Power BI Developer",
     "SQL Enthusiast",
-    "Dashboard Designer",
-    "Python Analyst"
+    "Python Learner",
+    "Tableau Developer"
 ];
 
 let wordIndex = 0;
@@ -143,110 +127,113 @@ let isDeleting = false;
 
 function typeEffect() {
 
-    if (!typingText) return;
-
     const currentWord = words[wordIndex];
 
     if (!isDeleting) {
 
-        typingText.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
+        typingText.textContent = currentWord.substring(0, charIndex++);
 
-        if (charIndex === currentWord.length) {
+        if (charIndex > currentWord.length) {
+
             isDeleting = true;
-            setTimeout(typeEffect, 1500);
+
+            setTimeout(typeEffect, 1200);
+
             return;
         }
 
-    } else {
+    }
+    else {
 
-        typingText.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
+        typingText.textContent = currentWord.substring(0, charIndex--);
 
-        if (charIndex === 0) {
+        if (charIndex < 0) {
+
             isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
+
+            wordIndex++;
+
+            if (wordIndex >= words.length)
+                wordIndex = 0;
+
         }
 
     }
 
-    const typingSpeed = isDeleting ? 55 : 110;
-    setTimeout(typeEffect, typingSpeed);
+    setTimeout(typeEffect, isDeleting ? 60 : 120);
 
 }
 
 typeEffect();
 
-
 // ======================================
-// 6. Back To Top Button
+// Back To Top Button
 // ======================================
 
 const topButton = document.createElement("button");
+
 topButton.innerHTML = "↑";
 topButton.id = "topBtn";
 topButton.setAttribute("aria-label", "Back to top");
+
 document.body.appendChild(topButton);
 
-function toggleTopButton() {
-    topButton.classList.toggle("visible", window.scrollY > 400);
-}
+topButton.style.position = "fixed";
+topButton.style.right = "25px";
+topButton.style.bottom = "25px";
+topButton.style.width = "50px";
+topButton.style.height = "50px";
+topButton.style.borderRadius = "50%";
+topButton.style.border = "none";
+topButton.style.cursor = "pointer";
+topButton.style.fontSize = "22px";
+topButton.style.fontWeight = "600";
+topButton.style.background = "#38bdf8";
+topButton.style.color = "#0f172a";
+topButton.style.opacity = "0";
+topButton.style.pointerEvents = "none";
+topButton.style.transition = "opacity .3s ease, transform .3s ease";
+topButton.style.boxShadow = "0 8px 20px rgba(0,0,0,.3)";
+topButton.style.zIndex = "999";
 
-window.addEventListener("scroll", toggleTopButton);
-window.addEventListener("load", toggleTopButton);
-
-topButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+topButton.addEventListener("mouseenter", () => {
+    topButton.style.transform = "translateY(-4px)";
 });
 
+topButton.addEventListener("mouseleave", () => {
+    topButton.style.transform = "translateY(0)";
+});
 
-// ======================================
-// 7. Projects Carousel Arrows
-// ======================================
+window.addEventListener("scroll", () => {
 
-const projectScroll = document.getElementById("projectScroll");
-const carPrev = document.getElementById("carPrev");
-const carNext = document.getElementById("carNext");
+    if (window.scrollY > 400) {
 
-function scrollByCard(direction) {
+        topButton.style.opacity = "1";
+        topButton.style.pointerEvents = "auto";
 
-    if (!projectScroll) return;
+    } else {
 
-    const card = projectScroll.querySelector(".project-card");
-    const gap = 24;
-    const distance = card ? card.getBoundingClientRect().width + gap : 360;
+        topButton.style.opacity = "0";
+        topButton.style.pointerEvents = "none";
 
-    projectScroll.scrollBy({
-        left: direction * distance,
+    }
+
+});
+
+topButton.onclick = () => {
+
+    window.scrollTo({
+
+        top: 0,
+
         behavior: "smooth"
+
     });
 
-}
-
-if (carPrev) carPrev.addEventListener("click", () => scrollByCard(-1));
-if (carNext) carNext.addEventListener("click", () => scrollByCard(1));
-
+};
 
 // ======================================
-// 8. Current Year in Footer
+// Console Message
 // ======================================
 
-const footerText = document.querySelector("footer p");
-
-if (footerText) {
-    footerText.textContent = `© ${new Date().getFullYear()} Rasika Patil — Data Analyst Portfolio`;
-}
-
-
-// ======================================
-// 9. Console Log
-// ======================================
-
-console.log("Rasika Patil — Data Analyst Portfolio loaded.");
-console.log("Projects loaded:", document.querySelectorAll(".project-card").length);
-console.log("Skills loaded:", document.querySelectorAll(".skill-card").length);
-
-
-// ======================================
-// END OF SCRIPT
-// ======================================
+console.log("Welcome to Rasika Patil's Data Analyst Portfolio!");
