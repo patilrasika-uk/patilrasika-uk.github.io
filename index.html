@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rasika Patil | Data Analyst Portfolio</title>
+<meta name="description" content="Rasika Patil - Aspiring Data Analyst skilled in Python, SQL, Excel, Power BI and Tableau. Portfolio of dashboards and data visualization projects.">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="container navbar">
+    <a href="#home" class="logo">Rasika<span>.</span>Patil</a>
+
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+
+    <div class="hero-text reveal">
+      <p class="eyebrow">DATA ANALYST &middot; MUMBAI, INDIA</p>
+      <h1>Turning raw data<br>into <span>readable decisions.</span></h1>
+      <p class="hero-description">
+        I'm Rasika Patil, an aspiring Data Analyst passionate about Data Analytics
+        and Business Intelligence. Skilled in Python, SQL, Excel, Power BI, Tableau,
+        Pandas, NumPy and Matplotlib &mdash; I love transforming raw data into
+        meaningful business insights.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-chart-line"></i> View Projects
+        </a>
+        <a href="Resume.pdf" download class="btn btn-secondary">
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          Contact Me
+        </a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rasika-patil/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:patilrasika362@gmail.com" aria-label="Send an email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="data-card">
+        <div class="card-top">
+          <span>QUERY.RESULT</span>
+          <span class="status"><span></span>LIVE</span>
+        </div>
+
+        <div class="card-terminal">
+          <p><span class="prompt">&gt;</span> import pandas as pd</p>
+          <p><span class="prompt">&gt;</span> df.groupby('region').sum()</p>
+          <p class="typing"><span class="prompt">&gt;</span> <span id="typedLine"></span><span class="cursor">&nbsp;</span></p>
+        </div>
+
+        <div class="chart" aria-hidden="true">
+          <div class="bar bar-1"></div>
+          <div class="bar bar-2"></div>
+          <div class="bar bar-3"></div>
+          <div class="bar bar-4"></div>
+          <div class="bar bar-5"></div>
+          <div class="bar bar-6"></div>
+          <div class="bar bar-7"></div>
+        </div>
+        <div class="chart-labels">
+          <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+        </div>
+
+        <div class="metric">
+          <div>
+            <small>STATUS</small>
+            <strong>Open to work</strong>
+          </div>
+          <div class="metric-icon"><i class="fa-solid fa-database"></i></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <p class="eyebrow">ABOUT</p>
+      <h2>Fresher by title,<br><span>data-driven</span> by habit.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I am an aspiring Data Analyst passionate about solving business problems
+          through data. I enjoy creating interactive dashboards, performing data
+          analysis, and building visualizations that help organizations make
+          informed decisions.
+        </p>
+        <p>
+          My toolkit spans Python, SQL, Excel, Power BI and Tableau &mdash; and
+          I'm most comfortable when I'm cleaning a messy dataset, finding the
+          story inside it, and presenting that story clearly to someone who
+          needs to make a decision from it.
+        </p>
+      </div>
+
+      <div class="about-stats reveal">
+        <div class="stat-card">
+          <strong id="statProjects">0</strong>
+          <span>Dashboards &amp; projects built</span>
+        </div>
+        <div class="stat-card">
+          <strong id="statTools">0</strong>
+          <span>Tools &amp; technologies</span>
+        </div>
+        <div class="stat-card">
+          <strong>Fresher</strong>
+          <span>Ready to contribute from day one</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section section-dark" id="skills">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <p class="eyebrow">SKILLS</p>
+      <h2>What I work <span>with.</span></h2>
+    </div>
+
+    <div class="skills-groups">
+
+      <div class="skills-group reveal">
+        <h3 class="group-title"><i class="fa-solid fa-code"></i> Programming &amp; Analysis</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+            <h3>Python</h3>
+            <p>Scripting &amp; analysis</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-table"></i></div>
+            <h3>Pandas</h3>
+            <p>Data wrangling</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-square-root-variable"></i></div>
+            <h3>NumPy</h3>
+            <p>Numerical computing</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-group reveal">
+        <h3 class="group-title"><i class="fa-solid fa-chart-pie"></i> Data Visualization</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Power BI</h3>
+            <p>Interactive dashboards</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-chart-bar"></i></div>
+            <h3>Tableau</h3>
+            <p>Visual storytelling</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-chart-area"></i></div>
+            <h3>Matplotlib</h3>
+            <p>Plotting &amp; charts</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-chart-simple"></i></div>
+            <h3>Seaborn</h3>
+            <p>Statistical plots</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-group reveal">
+        <h3 class="group-title"><i class="fa-solid fa-database"></i> Database</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+            <h3>SQL</h3>
+            <p>Querying &amp; joins</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-group reveal">
+        <h3 class="group-title"><i class="fa-solid fa-file-excel"></i> Spreadsheet &amp; Tools</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-solid fa-file-excel"></i></div>
+            <h3>Excel</h3>
+            <p>Advanced Excel</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon"><i class="fa-brands fa-github"></i></div>
+            <h3>GitHub</h3>
+            <p>Version control</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2>Dashboards I've <span>built.</span></h2>
+      <p class="heading-description">A few dashboards from my portfolio, built while learning to turn raw datasets into decisions.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <div class="project-content">
+          <div class="project-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+          <h3>Domino's Sales Dashboard</h3>
+          <p>Tableau dashboard created to analyze Domino's sales performance, customer orders and product trends.</p>
+          <div class="tags">
+            <span>Total Sales &amp; Revenue</span>
+            <span>Top-Selling Categories</span>
+            <span>Monthly Trends</span>
+          </div>
+          <div class="tags tags-tools">
+            <span>Tableau</span><span>Excel</span><span>Data Viz</span>
+          </div>
+          <a href="https://github.com/patilrasika-uk/Domino-s_Dashboard" target="_blank" rel="noopener" class="project-link">
+            View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-content">
+          <div class="project-icon"><i class="fa-brands fa-instagram"></i></div>
+          <h3>Instagram Analytics Dashboard</h3>
+          <p>Dashboard analyzing engagement, follower growth, post performance and social media metrics.</p>
+          <div class="tags tags-tools">
+            <span>Tableau</span><span>Analytics</span>
+          </div>
+          <a href="https://github.com/patilrasika-uk/Instagram_project" target="_blank" rel="noopener" class="project-link">
+            View Project <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-content">
+          <div class="project-icon"><i class="fa-solid fa-shirt"></i></div>
+          <h3>Zudio Sales Dashboard</h3>
+          <p>Interactive sales dashboard analyzing revenue, products, categories, customers and sales performance.</p>
+          <div class="tags tags-tools">
+            <span>Tableau</span><span>Sales Analysis</span>
+          </div>
+          <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener" class="project-link">
+            View Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-content">
+          <div class="project-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3>Marketing Dashboard</h3>
+          <p>Marketing analytics dashboard tracking campaigns, customer engagement, conversion rates and performance.</p>
+          <div class="tags tags-tools">
+            <span>Tableau</span><span>Marketing Analytics</span>
+          </div>
+          <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener" class="project-link">
+            View Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-content">
+          <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <h3>Super Sales Dashboard</h3>
+          <p>Business sales dashboard analyzing sales, profit, customers, regions, categories and overall performance.</p>
+          <div class="tags tags-tools">
+            <span>Tableau</span><span>Business Intelligence</span>
+          </div>
+          <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener" class="project-link">
+            View Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section class="section section-dark" id="education">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <p class="eyebrow">EDUCATION</p>
+      <h2>How I got <span>here.</span></h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-date">CERTIFICATION</p>
+          <h3>Data Analyst Course</h3>
+          <p>Webtech Computer Education, Bhayander East, Thane</p>
+          <p>Advanced Excel, Python (NumPy, Pandas, Matplotlib, Seaborn), Power BI and Tableau.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <p class="timeline-date">DEGREE</p>
+          <h3>Bachelor of Commerce (B.Com)</h3>
+          <p>Sailee Degree College, Yashwantrao Chavan Maharashtra Open University, Mumbai, Maharashtra</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATES ================= -->
+<section class="section" id="certificates">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <p class="eyebrow">CERTIFICATIONS</p>
+      <h2>Trained &amp; <span>hands-on.</span></h2>
+      <p class="heading-description">Core skills validated through my Data Analyst training program.</p>
+    </div>
+
+    <div class="skills-grid certs-grid reveal">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+        <h3>Python</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>SQL</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>Power BI</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fa-solid fa-chart-bar"></i></div>
+        <h3>Tableau</h3>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fa-solid fa-file-excel"></i></div>
+        <h3>Excel</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact-section" id="contact">
+  <div class="container contact-content">
+    <p class="eyebrow">CONTACT</p>
+    <h2>Let's talk <span>data.</span></h2>
+    <p>
+      Open to Data Analyst opportunities &mdash; internships, entry-level roles,
+      or a quick chat about a dataset. Reach out any time.
+    </p>
+
+    <a href="mailto:patilrasika362@gmail.com" class="btn btn-primary">
+      <i class="fa-solid fa-envelope"></i> Say Hello
+    </a>
+
+    <div class="contact-socials">
+      <a href="mailto:patilrasika362@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/rasika-patil/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-content">
+    <p>&copy; <span id="year"></span> Rasika Patil &middot; Data Analyst Portfolio</p>
+    <div class="footer-icons">
+      <a href="https://github.com/patilrasika-uk" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/rasika-patil/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
